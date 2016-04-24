@@ -24,19 +24,19 @@
     <TextView
         android:id="@+id/secondLine"
         android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:singleLine="true"
         android:text="жанры"
         android:textSize="12sp"
         android:layout_below="@+id/firstLine"
         android:layout_alignStart="@+id/firstLine"
-        android:padding="5dp"/>
+        android:padding="5dp" />
 
     <TextView
         android:id="@+id/firstLine"
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/frameLayout"
         android:gravity="center_vertical"
         android:text="Артист"

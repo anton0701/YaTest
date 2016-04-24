@@ -43,8 +43,6 @@ public class DetailActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //final FrameLayout fr = (FrameLayout)findViewById(R.id.frameLayout2);
-
         avatarImageView = (ProfileImageView)findViewById(R.id.imageView);
         descriptionTextView = (TextView)findViewById(R.id.descriptionTextView);
         albumsTracksTextView = (TextView)findViewById(R.id.albumsTracksTextView);

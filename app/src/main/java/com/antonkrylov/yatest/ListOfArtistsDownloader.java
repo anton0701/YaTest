@@ -54,12 +54,11 @@ class ListOfArtistsDownloader extends AsyncTask<String, Void, ArrayList<Artist>>
 
             //Если нет имени, то остальное все не нужно. Если нет другого параметра, то парсим то, что есть
             for (int i=0; i<jsonArray.length(); i++) {
-                //System.out.println("Part of JSONArray: " + String.valueOf(jsonArray.getJSONObject(i)));
                 try {
                     JSONObject artistJSON = jsonArray.getJSONObject(i);
                     Artist artist = new Artist();
                     artist.name = artistJSON.getString("name");//Если exception, то выполнится (1) и начнет парсить след артиста
-
+                    //По каждому полю проверяем его наличие, тип, валидность(URL)
                     if(artistJSON.has("tracks")) {
                         if(artistJSON.get("tracks") instanceof Integer) {
                             artist.tracks = (Integer)artistJSON.get("tracks");

@@ -47,18 +47,21 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
 
         } else {
+            //Инициализация синглтона для скачивания изображений
             imageLoader = ImageLoader.getInstance();
             imageLoader.init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
+            //Инициализация ArrayList, который будет хранить скаченные распаршенные обьекты Artist
             artistArrayList = new ArrayList<Artist>();
             listView = (ListView) findViewById(R.id.listView);
 
             try {
+                //Скачиваем и парсим JSON об артистах
                 ListOfArtistsDownloader downloader = new ListOfArtistsDownloader();
                 artistArrayList = downloader.execute("http://download.cdn.yandex.net/mobilization-2016/artists.json").get();
 
                 artistAdapter = new ArtistAdapter(this, artistArrayList);
                 listView.setAdapter(artistAdapter);
-
+                //Вешаем обработчик нажатия на ячейку listView
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
