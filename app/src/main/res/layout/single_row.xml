@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="180dp"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/icon"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:paddingRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/avatar150" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/secondLine"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="жанры"
+        android:textSize="12sp"
+        android:layout_below="@+id/firstLine"
+        android:layout_alignStart="@+id/firstLine"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/frameLayout"
+        android:gravity="center_vertical"
+        android:text="Артист"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/frameLayout"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8 альбомов, 95 песен"
+        android:id="@+id/albumSongsTextView"
+        android:layout_alignBottom="@+id/frameLayout"
+        android:layout_alignStart="@+id/secondLine" />
+
+</RelativeLayout>

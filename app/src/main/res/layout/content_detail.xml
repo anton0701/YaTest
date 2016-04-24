@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.antonkrylov.yatest.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="top"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
+        android:id="@+id/frameLayout2">
+
+        <com.antonkrylov.yatest.ProfileImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="top"
+            android:src="@drawable/download" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dance, electronics"
+        android:id="@+id/genresTextView"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 альбомов, 44 песни"
+        android:id="@+id/albumsTracksTextView"
+        android:layout_below="@+id/genresTextView"
+        android:layout_alignStart="@+id/genresTextView"
+        android:paddingLeft="20dp"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Биография"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/albumsTracksTextView"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New Text"
+        android:id="@+id/descriptionTextView"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перейти на сайт"
+        android:id="@+id/outerLinkTextView"
+        android:layout_alignBaseline="@id/textView3"
+        android:layout_toEndOf="@id/textView3"
+        android:paddingLeft="10dp"/>
+</RelativeLayout>
+</ScrollView>
